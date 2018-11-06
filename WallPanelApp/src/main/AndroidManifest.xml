@@ -17,7 +17,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.thanksmister.iot.wallpanel">
+    package="com.thanksmister.iot.wallpanellegacy">
 
     <!-- Permissions the Application Requires -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -44,12 +44,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name="com.thanksmister.iot.wallpanel.WallPanel"
+        android:name="com.thanksmister.iot.wallpanellegacy.WallPanel"
         tools:ignore="GoogleAppIndexingWarning"
         android:fullBackupContent="true">
 
         <activity
-            android:name="com.thanksmister.iot.wallpanel.ui.activities.WelcomeActivity"
+            android:name="com.thanksmister.iot.wallpanellegacy.ui.activities.WelcomeActivity"
             android:theme="@style/AppTheme"
             android:noHistory="true"
             android:label="@string/app_name">
@@ -59,14 +59,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.thanksmister.iot.wallpanel.ui.activities.SettingsActivity"
+            android:name="com.thanksmister.iot.wallpanellegacy.ui.activities.SettingsActivity"
             android:label="@string/title_settings">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.thanksmister.iot.wallpanel.ui.activities.BrowserActivityNative"
+            android:name="com.thanksmister.iot.wallpanellegacy.ui.activities.BrowserActivityNative"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_browser"
+            android:theme="@style/AppThemeFullScreen">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.thanksmister.iot.wallpanellegacy.ui.activities.BrowserActivityLegacy"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_browser"
             android:theme="@style/AppThemeFullScreen">
@@ -77,13 +87,13 @@
         <service
             android:name="org.eclipse.paho.android.service.MqttService" />
         <service
-            android:name="com.thanksmister.iot.wallpanel.network.WallPanelService"
+            android:name="com.thanksmister.iot.wallpanellegacy.network.WallPanelService"
             android:enabled="true"
             android:exported="false"
             android:stopWithTask="true"/>
 
         <receiver
-            android:name="com.thanksmister.iot.wallpanel.BootUpReceiver"
+            android:name="com.thanksmister.iot.wallpanellegacy.BootUpReceiver"
             android:enabled="true"
             android:exported="true"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED">

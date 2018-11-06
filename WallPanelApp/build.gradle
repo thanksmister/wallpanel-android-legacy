@@ -39,7 +39,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion "28.0.2"
     defaultConfig {
-        applicationId "com.thanksmister.iot.wallpanel"
+        applicationId "com.thanksmister.iot.wallpanellegacy"
         minSdkVersion versions.min_sdk
         targetSdkVersion versions.target_sdk
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
@@ -61,19 +61,19 @@ android {
         dev {
             dimension "default"
             buildConfigField "String", BASE_ENVIRONMENT, '"DEV_ENVIRONMENT"'
-            applicationId "com.thanksmister.iot.wallpanel"
+            applicationId "com.thanksmister.iot.wallpanellegacy"
             versionName "${versionMajor}.${versionMinor}.${versionPatch} Build ${versionBuild}-DEV"
         }
         qa {
             dimension "default"
             buildConfigField "String", BASE_ENVIRONMENT, '"QA_ENVIRONMENT"'
-            applicationId "com.thanksmister.iot.wallpanel"
+            applicationId "com.thanksmister.iot.wallpanellegacy"
             versionName "${versionMajor}.${versionMinor}.${versionPatch} Build ${versionBuild}-QA"
         }
         prod {
             dimension "default"
             buildConfigField "String", BASE_ENVIRONMENT, '"PROD_ENVIRONMENT"'
-            applicationId "com.thanksmister.iot.wallpanel"
+            applicationId "com.thanksmister.iot.wallpanellegacy"
             versionName "${versionMajor}.${versionMinor}.${versionPatch} Build ${versionBuild}"
         }
     }
