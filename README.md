@@ -1,5 +1,5 @@
 # WallPanel
-WallPanel is an Android application for Web Based Dashboards and Home Automation Platforms.
+WallPanel is an Android application for Web Based Dashboards and Home Automation Platforms.  This legacy version supports older devices running Android OS 4.1 using the Crosswalk browser in addition to the WebView component.  Unfortunately, Crosswalk is no longer compatible with Android Studio build tools and this version will most like not be supported. 
 
 ## Features
 - Web Based Dashboards and Home Automation Platforms support.
@@ -11,10 +11,10 @@ WallPanel is an Android application for Web Based Dashboards and Home Automation
 
 ## Hardware & Softare 
 
-- Android Device running Android OS 4.1 or greater.  Note: Android 4.0 devices use [WebView](https://developer.chrome.com/multidevice/webview/overview) to render webpages, The WebView shipped with Android 4.4 (KitKat) is based on the same code as Chrome for Android version 30. This WebView does not have full feature parity with Chrome for Android and is given the version number 30.0.0.0.
+- Android Device running Android OS 4.1 or greater.  Note: Android 4.0 devices use [WebView](https://developer.chrome.com/multidevice/webview/overview) to render webpages, The WebView shipped with Android 4.4 (KitKat) is based on the same code as Chrome for Android version 30. This WebView does not have full feature parity with Chrome for Android and is given the version number 30.0.0.0.  You have the option to switch to the legacy browser support using Crosswalk for webpage rendering.
 
 ## Quick Start
-You can either side load the application to your device from the release section or install the application from the [Google Play store](https://play.google.com/store/apps/details?id=com.thanksmister.iot.wallpanel). The application will open to the welcome page with a link to update the settings. Go to settings, and setup the link to your web page or home automation platform. You may also update additional settings for Motion, Face Detection, and for publishing device sensor data. 
+You must side load the application to your device from the release section of the project page. The application will open to the welcome page with a link to update the settings. Go to settings, and setup the link to your web page or home automation platform. You may also update additional settings for Motion, Face Detection, and for publishing device sensor data. 
 
 ## Support
 For issues, feature requests, comments or questions, use the [Github issues tracker](https://github.com/thanksmister/wallpanel-android/issues).
