@@ -56,8 +56,34 @@ class WelcomeActivity : DaggerAppCompatActivity() {
     }
 
     private fun startBrowserActivity() {
-        Timber.i("startBrowserActivity Called")
-        val intent = Intent(this@WelcomeActivity,  BrowserActivityNative::class.java)
+        val browserType = configuration.androidBrowserType
+        Timber.i("startBrowserActivity browserType $browserType")
+        val targetClass: Class<*>
+        when (browserType) {
+            Configuration.PREF_BROWSER_NATIVE -> {
+                Timber.i( "Explicitly using native browser")
+                targetClass = BrowserActivityNative::class.java
+            }
+            Configuration.PREF_BROWSER_LEGACY  -> {
+                Timber.i("Explicitly using legacy browser")
+                targetClass = BrowserActivityLegacy::class.java
+            }
+            Configuration.PREF_BROWSER_AUTO -> {
+                Timber.i("Auto-selecting dashboard browser")
+                targetClass = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                    BrowserActivityNative::class.java
+                else
+                    BrowserActivityLegacy::class.java
+            }
+            else -> {
+                Timber.i("Auto-selecting dashboard browser")
+                targetClass = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                    BrowserActivityNative::class.java
+                else
+                    BrowserActivityLegacy::class.java
+            }
+        }
+        val intent = Intent(this@WelcomeActivity, targetClass)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
         finish()
