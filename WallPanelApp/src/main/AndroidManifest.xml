@@ -66,6 +66,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.thanksmister.iot.wallpanellegacy.ui.activities.LiveCameraActivity"
+            android:label="@string/title_settings">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.thanksmister.iot.wallpanellegacy.ui.activities.BrowserActivityNative"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_browser"
