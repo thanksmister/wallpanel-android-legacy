@@ -1,6 +1,9 @@
 # WallPanel
 WallPanel (Legacy) is an Android application for Web Based Dashboards and Home Automation Platforms.  This legacy version supports older devices running Android OS 4.1 using the Crosswalk browser in addition to the WebView component.  Unfortunately, Crosswalk is no longer compatible with Android Studio build tools and this version will most like not be supported. 
 
+## Support
+For issues, feature requests, comments or questions, use the [Github issues tracker](https://github.com/thanksmister/wallpanel-android/issues).  You can also join the [ThanksMister Community](https://community.thanksmister.com/) to ask questions or share any helpful information about this project. 
+
 ## Features
 - Web Based Dashboards and Home Automation Platforms support.
 - Camera support for streaming video, motion detection, face detection, and QR Code reading.
@@ -15,9 +18,6 @@ WallPanel (Legacy) is an Android application for Web Based Dashboards and Home A
 
 ## Quick Start
 You must side load the application to your device from the release section of the project page. The application will open to the welcome page with a link to update the settings. Go to settings, and setup the link to your web page or home automation platform. You may also update additional settings for Motion, Face Detection, and for publishing device sensor data. 
-
-## Support
-For issues, feature requests, comments or questions, use the [Github issues tracker](https://github.com/thanksmister/wallpanel-android/issues).
 
 ## MQTT Sensor and State Data
 If MQTT is enabled in the settings and properly configured, the application can publish data and states for various device sensors, camera detections, and application states.
